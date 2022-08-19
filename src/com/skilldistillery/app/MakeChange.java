@@ -39,6 +39,14 @@ public class MakeChange {
 		} else if (amount < price) {
 			double needMore = price - amount;
 			System.out.printf("Insufficient amount. Request at least $%.2f more.", needMore);
+		} else {
+			makeChange(price, amount);
 		}
+	}
+
+	private static void makeChange(double price, double amount) {
+		// TODO Auto-generated method stub
+		double changeAmount = amount - price;
+		System.out.printf("Change due: $%.2f", changeAmount);
 	}
 }
