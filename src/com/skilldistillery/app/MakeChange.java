@@ -9,12 +9,26 @@ public class MakeChange {
 
 		Scanner kb = new Scanner(System.in);
 		
-		System.out.println("Please enter the price of the item");
-		double price = kb.nextDouble();
+		price();
 		
 		System.out.println("Please enter the amount provided by the customer");
 		double amount = kb.nextDouble();
 		
 	}
 
+	public static double price() {
+		Scanner kb = new Scanner(System.in);
+		
+		System.out.println("Please enter the price of the item");
+		double price = kb.nextDouble();
+		return price;
+	}
+	
+	public static double amount() {
+		Scanner kb = new Scanner(System.in);
+		
+		System.out.println("Please enter the amount provided by the customer");
+		double amount = kb.nextDouble();
+		return amount;
+	}
 }
