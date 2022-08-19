@@ -9,10 +9,11 @@ public class MakeChange {
 
 		Scanner kb = new Scanner(System.in);
 		
-		price();
+		double price = price();
 		
-		System.out.println("Please enter the amount provided by the customer");
-		double amount = kb.nextDouble();
+		double amount = amount();
+		
+		lessOrExact(price, amount);
 		
 	}
 
@@ -30,5 +31,14 @@ public class MakeChange {
 		System.out.println("Please enter the amount provided by the customer");
 		double amount = kb.nextDouble();
 		return amount;
+	}
+	
+	public static void lessOrExact(double price, double amount) {
+		if (amount == price) {
+			System.out.println("Exact amount. No change due");
+		} else if (amount < price) {
+			double needMore = price - amount;
+			System.out.printf("Insufficient amount. Request at least $%.2f more.", needMore);
+		}
 	}
 }
