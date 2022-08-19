@@ -12,7 +12,8 @@ public class MakeChange {
 		System.out.println("Please enter the price of the item");
 		double price = kb.nextDouble();
 		
-		
+		System.out.println("Please enter the amount provided by the customer");
+		double amount = kb.nextDouble();
 		
 	}
 
