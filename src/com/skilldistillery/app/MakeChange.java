@@ -15,6 +15,8 @@ public class MakeChange {
 		
 		lessOrExact(price, amount);
 		
+		kb.close();
+		
 	}
 
 	public static double price() {
@@ -47,6 +49,45 @@ public class MakeChange {
 	private static void makeChange(double price, double amount) {
 		// TODO Auto-generated method stub
 		double changeAmount = amount - price;
-		System.out.printf("Change due: $%.2f", changeAmount);
+		System.out.printf("Change due: $%.2f. Result: ", changeAmount);
+		
+		double numTwenties = changeAmount / 20;		
+		
+		if (numTwenties > 0) {
+			if ((int) numTwenties > 1) {
+				System.out.print( (int) numTwenties + " twenty dollar bills, ");
+			} else if ((int) numTwenties == 1){
+				System.out.print((int) numTwenties + " twenty dollar bill, ");
+			}
+		}
+		
+		changeAmount = changeAmount - (20.00 * (int) numTwenties);
+//		System.out.printf("$%.2f", changeAmount);
+		
+		double numTens = changeAmount / 10;		
+		
+//		if (numTens > 0) {
+			if ((int) numTens > 1) {
+				System.out.print( (int) numTens + " ten dollar bills, ");
+			} else if ((int) numTens == 1) {
+				System.out.println((int) numTens + " ten dollar bill, ");
+			}
+//		} 
+		
+		changeAmount = changeAmount - (10.00 * (int) numTens);
+//		System.out.printf("$%.2f", changeAmount);
+		
+		double numFives = changeAmount / 5;		
+		
+//		if (numFives > 0) {
+			if ((int) numFives > 1) {
+				System.out.print( (int) numFives + " five dollar bills, ");
+			} else if ((int) numFives == 1) {
+				System.out.println((int) numFives + " five dollar bill, ");
+			}
+//		} 
+		
+		changeAmount = changeAmount - (5.00 * (int) numTens);
+//		System.out.printf("$%.2f", changeAmount);
 	}
 }
