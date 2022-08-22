@@ -95,7 +95,7 @@ public class MakeChange {
 		changeAmount = changeAmount - (1.00 * (int) numOnes);
 //		 System.out.printf("\n $%.2f", changeAmount);
 
-		double numQuarters = changeAmount / 0.25;
+		double numQuarters = changeAmount / .25;
 
 		if ((int) numQuarters > 1) {
 			System.out.println((int) numQuarters + " quarters ");
@@ -106,7 +106,7 @@ public class MakeChange {
 		changeAmount = changeAmount - (0.25 * (int) numQuarters);
 //			 System.out.printf("\n $%.2f", changeAmount);
 
-		double numDimes = changeAmount / 0.10 + 0.00000000000001;
+		double numDimes = changeAmount / .10 + .001;
 
 		if ((int) numDimes > 1) {
 			System.out.println((int) numDimes + " dimes ");
@@ -114,10 +114,10 @@ public class MakeChange {
 			System.out.println((int) numDimes + " dime ");
 		}
 
-		changeAmount = changeAmount - (0.10 * (int) numDimes);
+		changeAmount = changeAmount - (.10 * (int) numDimes);
 //			 System.out.printf("\n $%.2f", changeAmount);
 
-		double numNickels = (changeAmount / 0.05) + 0.001;
+		double numNickels = (changeAmount / .05 + .001);
 //			 System.out.println("\n" + numNickels);
 
 		if ((int) numNickels > 1) {
@@ -126,10 +126,10 @@ public class MakeChange {
 			System.out.println((int) numNickels + " nickel ");
 		}
 
-		changeAmount = changeAmount - (0.05 * (int) numNickels);
+		changeAmount = changeAmount - (.05 * (int) numNickels);
 //				 System.out.printf("\n $%.2f", changeAmount);
 
-		double numPennies = (changeAmount / 0.01) + 0.0001;
+		double numPennies = (changeAmount / .01 + .001);
 //				 System.out.println("\n" + numPennies);
 
 		if ((int) numPennies > 1) {
@@ -138,7 +138,7 @@ public class MakeChange {
 			System.out.println((int) numPennies + " penny. ");
 		}
 
-		changeAmount = changeAmount - (0.01 * (int) numPennies);
+		changeAmount = changeAmount - (.01 * (int) numPennies);
 //					 System.out.printf("\n $%.2f", changeAmount);
 	}
 }
