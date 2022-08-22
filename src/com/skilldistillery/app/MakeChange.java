@@ -103,7 +103,7 @@ public class MakeChange {
 			System.out.println((int) numQuarters + " quarter ");
 		}
 
-		changeAmount = changeAmount - (0.25 * (int) numQuarters);
+		changeAmount = changeAmount - (.25 * (int) numQuarters);
 //			 System.out.printf("\n $%.2f", changeAmount);
 
 		double numDimes = changeAmount / .10 + .001;
